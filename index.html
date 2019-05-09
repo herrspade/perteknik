@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+body {text-align: center}
+
+</style>
+
+<body>
+
+<h2 class="w3-center">Dagens outfit</h2>
+f&ouml;rslag du kanske gillar/rekomendras
+
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides1" src="hat1.jpg" style="margin-left:auto;margin-right:auto;height:75px">
+  <img class="mySlides1" src="hat2.jpg" style="margin-left:auto;margin-right:auto; height:75px">
+  <img class="mySlides1" src="hat3.jpg" style="margin-left:auto;margin-right:auto; height:75px">
+  <img class="mySlides1" src="hat4.jpg" style="margin-left:auto;margin-right:auto; height:75px">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+</div>
+
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides2" src="top1.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <img class="mySlides2" src="top2.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <img class="mySlides2" src="top3.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+</div>
+
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides3" src="bottom1.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <img class="mySlides3" src="bottom2.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <img class="mySlides3" src="bottom3.jpg" style="margin-left:auto;margin-right:auto; height:200px">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 2)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 2)">&#10095;</button>
+</div>
+
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides4" src="footwear1.jpg" style="margin-left:auto;margin-right:auto; height:150px">
+  <img class="mySlides4" src="footwear2.jpg" style="margin-left:auto;margin-right:auto; height:150px">
+  <img class="mySlides4" src="footwear3.jpg" style="margin-left:auto;margin-right:auto; height:150px">
+  <img class="mySlides4" src="footwear4.jpg" style="margin-left:auto;margin-right:auto; height:150px">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 3)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 3)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = [1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+showDivs(1, 3);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) 
+  {
+      slideIndex[no] = 1
+  }
+  if (n < 1) {
+        slideIndex[no] = x.length
+  }
+  for (i = 0; i < x.length; i++) 
+  {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+
+
+</body>
+</html>
